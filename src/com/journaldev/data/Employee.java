@@ -1,5 +1,7 @@
 package com.journaldev.data;
 
+// from journaldev.com
+
 public class Employee {
 	private String employeeId;
 	private String employeeName;

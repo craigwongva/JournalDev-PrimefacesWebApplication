@@ -1,8 +1,26 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core" xmlns:p="http://primefaces.org/ui">
+
+<!-- from logicbig.com
+     Craig added <h:head> tag
+     uses EmployeeSelectionBean.java
+-->
+
 <h:head></h:head>
 <h:body>
-    <h2>Primefaces Simple Dialog Example</h2>
+
+<p:commandButton value="Mi viaje comenzó" type="button" onclick="PF('userAgreement').show();"/>
+
+
+<p:dialog header="User Agreement Header" modal="true" visible="true" widgetVar="userAgreement" >
+    <h:form>    
+      <h:outputText value="You agree to do stuff." />
+      <p:commandButton value="Submit" onclick="PF('userAgreement').hide()"
+         actionListener="#{S3View.acceptAgreement()}" />
+    </h:form>
+</p:dialog>
+
+    <h2>144 Primefaces Simple Dialog Example</h2>
 
     <p:commandButton value="Select Employees" type="button" onclick="PF('dlg').show();"/>
 

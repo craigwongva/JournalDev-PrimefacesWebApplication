@@ -1,5 +1,7 @@
 package com.journaldev.jsfBeans;
 
+// from logicbig.com
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Arrays;

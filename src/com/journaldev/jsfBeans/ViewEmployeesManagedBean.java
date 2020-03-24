@@ -1,5 +1,7 @@
 package com.journaldev.jsfBeans;
 
+// from journaldev.com
+
 import java.util.ArrayList;
 import java.util.List;
 
