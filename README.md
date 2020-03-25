@@ -4,13 +4,23 @@ These two examples are crammed into a single project on the “Prime” c9 insta
 - https://www.journaldev.com/2990/jsf-primefaces-tutorial
 - https://www.logicbig.com/tutorials/misc/primefaces/basic-dialog.html
 
-# Set up the instance and environment
+### Set up the instance and environment
 
 [maven hello world war](https://github.com/craigwongva/gist/issues/466)
 
-### Build it
+### Start a new day
+```
+sudo su -
+export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.242.b08-0.50.amzn1.x86_64
+/opt/tomcat9/bin/startup.sh
+exit
+```
 
-`mvn package`
+### Build it
+```
+cd ~/environment/JournalDev-PrimefacesWebApplication
+mvn package
+```
 
 ### Deploy it
 
