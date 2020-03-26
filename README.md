@@ -29,3 +29,6 @@ mvn package
 ### Run it
 
 `http://w.x.y.z:8080/jd/faces/dialog.xhtml`
+
+### References
+This page is the basis for this repo's [templates](https://www.tutorialspoint.com/jsf/jsf_templates_tag.htm).
