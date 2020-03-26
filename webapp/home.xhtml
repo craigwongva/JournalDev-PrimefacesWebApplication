@@ -5,33 +5,38 @@
 <html xmlns = "http://www.w3.org/1999/xhtml"   
    xmlns:h = "http://java.sun.com/jsf/html"
    xmlns:ui = "http://java.sun.com/jsf/facelets"
-   xmlns:p="http://primefaces.org/ui"> <!-- added by craig -->
-   
+   xmlns:p = "http://primefaces.org/ui"
+   xmlns:f = "http://java.sun.com/jsf/core" >
+   <!-- last two lines added by craig -->   
    <!--
-   Only content inside the first <ui:define> renders.
+                     actionListener="#{S3View.acceptAgreement()}" />
    -->
    <h:body>
       hi craig
       <ui:composition template = "templates/common.xhtml">	
          hi kaitlin
-         <ui:define name = "content">				
-            <br/><br/>
-            hi tony
+         <ui:define name = "content">
+            hello world
+         </ui:define>         
+         <ui:define name = "contentfoo">
+            <h:link value = "169 Page 1" outcome = "page1" />
+            <br/>
+            <h:link value = "Page 2" outcome = "page2" />
+            <h:form>
+               <h:commandButton value="Calculate">
+                    <f:ajax execute="@form" render="@all"
+                        listener="#{managedBeanController.ajaxPerformFibonnaciOperation}" />
+               </h:commandButton>
+            </h:form>
+<!--            
             <p:dialog header="User Agreement Header" modal="true" visible="true" widgetVar="userAgreement" >
                <h:form>    
                   <h:outputText value="You agree to do stuff." />
-                  <p:commandButton value="Submit" onclick="PF('userAgreement').hide()"
-                     actionListener="#{S3View.acceptAgreement()}" />
+                  <p:commandButton value="Submit" onclick="PF('userAgreement').hide()" />                     
                </h:form>
             </p:dialog>
-            
-             <h:link value = "151 Page 1" outcome = "page1" />
-            hi travis
-             <h:link value = "Page 2" outcome = "page2" />
-            hi jae
-            <br/><br/>
+-->
          </ui:define>
-         hi kaliyah
       </ui:composition>
 
       hi judy

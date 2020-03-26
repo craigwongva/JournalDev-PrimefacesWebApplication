@@ -37,6 +37,4 @@ public class ViewEmployeesManagedBean {
 	public void setEmployees(List<Employee> employees) {
 		this.employees = employees;
 	}
-	
-	
 }

@@ -2,9 +2,17 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
+<!-- craig
+<html xmlns="http://www.w3.org/1999/xhtml"
+   xmlns:ui="http://java.sun.com/jsf/facelets"
+   xmlns:h="http://java.sun.com/jsf/html"
+   xmlns:f="http://java.sun.com/jsf/core"
+   xmlns:p="http://primefaces.org/ui">
+-->
 <html xmlns = "http://www.w3.org/1999/xhtml"   
    xmlns:h = "http://java.sun.com/jsf/html"
-   xmlns:ui = "http://java.sun.com/jsf/facelets">
+   xmlns:ui = "http://java.sun.com/jsf/facelets"
+   xmlns:p="http://primefaces.org/ui"> <!-- added by craig -->
    
    <h:body> 
       <ui:composition template = "templates/common.xhtml">
@@ -14,6 +22,15 @@
          
          <ui:define name = "content">
             <h2>Page1 content</h2>
+            hi ted201
+            <p:dialog header="User Agreement Header" modal="true" visible="true" widgetVar="userAgreement" >
+               <h:form>    
+                  <h:outputText value="You agree to do stuff." />
+                  <p:commandButton value="Submit" onclick="PF('userAgreement').hide()"
+                     actionListener="#{S3View.acceptAgreement()}" />
+               </h:form>
+            </p:dialog>
+
              <h:link value = "Back To Home" outcome = "home" />
          </ui:define> 
          
