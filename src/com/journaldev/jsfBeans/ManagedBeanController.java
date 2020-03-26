@@ -7,7 +7,10 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 import javax.faces.event.AjaxBehaviorEvent;
- 
+
+// craig
+import org.primefaces.context.RequestContext;
+
 /**
  * @author Andres.Cespedes
  * @version 1.0 $Date: 07/02/2015
@@ -107,6 +110,12 @@ public class ManagedBeanController implements Serializable {
      */
     public void ajaxPerformFibonnaciOperation(final AjaxBehaviorEvent event) {
         System.out.println("-------ManagedBeanController@109----------");
+//RequestContext.getCurrentInstance().execute("PF('yourdialogid').show()");        
+RequestContext context = RequestContext.getCurrentInstance();
+context.execute("PF('userAgreement').show();");        
+        System.out.println("-------ManagedBeanController@109y----------");
+
+/*        
         if (numFibonacci <= 0) {
             setResult(0L);
         } else {
@@ -116,6 +125,7 @@ public class ManagedBeanController implements Serializable {
                 "Fibonacci Calculation for the " + numFibonacci
                         + " number was: " + result, "Fibonacci Calculation");
         FacesContext.getCurrentInstance().addMessage(null, facesMsg);
+*/        
     }
  
 }
